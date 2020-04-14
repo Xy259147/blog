@@ -50,6 +50,13 @@
             <!-- 启用 -->
             <optional>true</optional>
         </dependency>
+
+        <!-- @Table -->
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>persistence-api</artifactId>
+            <version>1.0.2</version>
+        </dependency>
     </dependencies>
 
     <build>
