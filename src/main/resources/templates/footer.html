@@ -22,26 +22,30 @@
         </div>
         <div class="header_nav">
             <ul class="clearfix">
-                <li><a th:href="@{/}">个人博客模板分享</a></li>
-                <li class="have_second"><a href="#">企业官网模板分享</a>
-                    <ul class="nav_second">
-                        <i></i>
-                        <li><a href="#">模板分享</a></li>
-                        <li><a href="#">模板分享</a></li>
-                        <li><a href="#">模板分享</a></li>
-                    </ul>
+                <!--/*@thymesVar id="menus" type=""*/-->
+                <li th:each="menu:${menus}">
+                    <a th:href="@{{url}(url=${menu.menuUrl})}" th:text="${menu.menuName}">个人博客模板分享</a>
                 </li>
-                <li class="have_second">
-                    <a href="#">学习笔记分享</a>
-                    <ul class="nav_second">
-                        <i></i>
-                        <li><a href="#">CSS笔记</a></li>
-                        <li><a href="#">JS笔记</a></li>
-                        <li><a href="#">Jquery笔记</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">我的博文</a></li>
-                <li><a th:href="@{/author}">关于我</a></li>
+<!--                <li><a th:href="@{/}">个人博客模板分享</a></li>-->
+<!--                <li class="have_second"><a href="#">企业官网模板分享</a>-->
+<!--                    <ul class="nav_second">-->
+<!--                        <i></i>-->
+<!--                        <li><a href="#">模板分享</a></li>-->
+<!--                        <li><a href="#">模板分享</a></li>-->
+<!--                        <li><a href="#">模板分享</a></li>-->
+<!--                    </ul>-->
+<!--                </li>-->
+<!--                <li class="have_second">-->
+<!--                    <a href="#">学习笔记分享</a>-->
+<!--                    <ul class="nav_second">-->
+<!--                        <i></i>-->
+<!--                        <li><a href="#">CSS笔记</a></li>-->
+<!--                        <li><a href="#">JS笔记</a></li>-->
+<!--                        <li><a href="#">Jquery笔记</a></li>-->
+<!--                    </ul>-->
+<!--                </li>-->
+<!--                <li><a href="#">我的博文</a></li>-->
+<!--                <li><a th:href="@{/author}">关于我</a></li>-->
             </ul>
         </div>
         <div class="header_search">
