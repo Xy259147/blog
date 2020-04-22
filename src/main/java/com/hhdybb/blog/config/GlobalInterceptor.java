@@ -23,7 +23,7 @@ public class GlobalInterceptor implements HandlerInterceptor {
         if(status != null && "success".equals(status)){
             return true;
         }
-        response.sendRedirect("/");
+        response.sendRedirect("/index");
         return false;
     }
 

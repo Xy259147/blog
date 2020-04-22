@@ -34,8 +34,7 @@ public class WebConfiguration extends WebMvcConfigurationSupport {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new GlobalInterceptor())
                 //首页不拦截
-                .excludePathPatterns("/");
-        //这里可以用registry.addInterceptor添加多个拦截器实例，后面加上匹配模式
-        super.addInterceptors(registry);//最后将register往这里塞进去就可以了
+                .excludePathPatterns("/index");
+        super.addInterceptors(registry);
     }
 }
