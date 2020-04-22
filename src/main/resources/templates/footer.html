@@ -11,6 +11,7 @@
     <link th:href="@{/css/base.css}" rel="stylesheet" type="text/css">
     <script th:src="@{/js/jquery-1.8.3.min.js}" type="text/javascript"></script>
     <script th:src="@{/js/base.js}" type="text/javascript"></script>
+    <script th:src="@{/js/request-data.js}" type="text/javascript"></script>
     <script th:src="@{/js/jquery.slides.min.js}" type="text/javascript"></script>
 </head>
 <body>
@@ -21,11 +22,16 @@
             <a th:href="@{/}"><h2>华仔の博客|</h2><h4>天行健,君子自强不息</h4></a>
         </div>
         <div class="header_nav">
-            <ul class="clearfix">
-                <!--/*@thymesVar id="menus" type=""*/-->
-                <li th:each="menu:${menus}">
-                    <a th:href="@{{url}(url=${menu.menuUrl})}" th:text="${menu.menuName}">个人博客模板分享</a>
-                </li>
+            <ul class="clearfix data_clearfix">
+<!--                &lt;!&ndash;/*@thymesVar id="menus" type=""*/&ndash;&gt;-->
+<!--                <li  th:each="menu:${menus}">-->
+<!--                    <a th:href="@{{url}(url=${menu.menuUrl})}" th:text="${menu.menuName}">个人博客模板分享</a>-->
+<!--                    <ul class="nav_second" th:if="${menu.menuStatus} eq 1">-->
+<!--                        <li><a href="#">模板分享</a></li>-->
+<!--                        <li><a href="#">模板分享</a></li>-->
+<!--                        <li><a href="#">模板分享</a></li>-->
+<!--                    </ul>-->
+<!--                </li>-->
 <!--                <li><a th:href="@{/}">个人博客模板分享</a></li>-->
 <!--                <li class="have_second"><a href="#">企业官网模板分享</a>-->
 <!--                    <ul class="nav_second">-->
