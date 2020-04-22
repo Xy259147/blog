@@ -35,6 +35,9 @@ public class Menu {
     @Column(name = "MENU_LEVEL")
     private Integer menuLevel;
 
+    @Column(name = "MENU_STATUS")
+    private Integer menuStatus;
+
     private List<Menu> menuList;
 
 }
