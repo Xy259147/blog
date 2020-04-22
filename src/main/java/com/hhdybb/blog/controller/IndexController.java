@@ -20,7 +20,7 @@ public class IndexController {
      * 博客首页
      * @return
      */
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/index", method = RequestMethod.GET)
     public ModelAndView index(HttpServletRequest request, Model model){
         model.addAttribute("menus",indexService.getMenu());
         request.getSession().setAttribute("status","success");

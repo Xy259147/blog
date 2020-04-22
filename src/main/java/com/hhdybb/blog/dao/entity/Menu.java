@@ -5,6 +5,7 @@ import lombok.Data;
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.List;
 
 /**
  * @Description TODO
@@ -30,5 +31,10 @@ public class Menu {
 
     @Column(name = "MENU_URL")
     private String menuUrl;
+
+    @Column(name = "MENU_LEVEL")
+    private Integer menuLevel;
+
+    private List<Menu> menuList;
 
 }

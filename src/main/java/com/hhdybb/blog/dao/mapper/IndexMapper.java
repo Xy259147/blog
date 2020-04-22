@@ -11,6 +11,6 @@ import java.util.List;
  */
 @Mapper
 public interface IndexMapper {
-    @Select("SELECT ID AS id,MENU_PARENT AS menuParent,MENU_NAME AS menuName,MENU_SORT AS menuSort,MENU_URL AS menuUrl FROM bl_menu")
+    @Select("SELECT ID AS id,MENU_PARENT AS menuParent,MENU_NAME AS menuName,MENU_SORT AS menuSort,MENU_URL AS menuUrl,MENU_LEVEL AS menuLevel FROM bl_menu")
     List<Menu> getMenu();
 }
