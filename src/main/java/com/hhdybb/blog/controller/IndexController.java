@@ -22,7 +22,6 @@ public class IndexController {
      */
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public ModelAndView index(HttpServletRequest request, Model model){
-        model.addAttribute("menus",indexService.getMenu());
         request.getSession().setAttribute("status","success");
         return new ModelAndView("/index");
     }
